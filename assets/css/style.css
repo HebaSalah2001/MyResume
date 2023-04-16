@@ -1,0 +1,408 @@
+:root{
+    /* Colors */
+    --color-primary: #ee5057;
+    --color-hover :#c3343d;
+    --color-secondary: #111;
+    --color-text: #898989;
+    --color-light : #f4f4f4;
+
+    /* Fonts */
+    --font-primary: 'Open Sans' , Helvetica , Arial , sans-serif
+    --font-bold: 700;
+    --font-light: 400;
+    --font-size-text: 13px;
+    --font-size-title: 20px;
+    --font-size-section-title: 48px;
+
+    /* Sizes */
+    --size-primary: 25px;
+    --size-double: calc(var(--size-primary) * 2);
+    --size-half: calc(var(--size-primary) / 2);
+
+    --margin-primary: var(--size-primary);
+    --padding-primary:  var(--size-primary);
+    --padding-double:  var(--size-double);
+    --padding-half:  var(--size-half);
+
+    --height-primary :  120px;
+
+   /* Breakpoints */
+   --breakpoint-md : 768px;
+
+  /* Index */
+   --z-tooltip: 10;
+   --z-fixed: 100;
+
+}
+
+a{
+   color: inherit; 
+   text-decoration: none;
+}
+
+
+
+.sec-name{
+    color: var(--color-primary);
+    position: absolute;
+    font-weight: bold;
+  }
+
+  .section-grey{
+    background-color: var(--color-light);
+  }
+   .section-white{
+    background-color: var(white);
+   }
+
+   /*************************scroll top*************************/
+.scrolltop {
+    position: fixed;
+    right: 1rem;
+    bottom: -20%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: .1rem;
+    background: var(--color-primary);
+    border-radius: .4rem;
+    z-index: var(--z-tooltip);
+    transition: .4s;
+    visibility: hidden;
+    }
+    .scrolltop i{
+    color: white;
+    font-size: 1.5rem;
+    font-weight: bolder;
+    }
+    
+    .scrolltop:hover {
+    background-color: var(--first-color-alt);
+    }
+    .scrolltop i:hover{
+    color: var(--color-primary);
+    }
+    
+    
+    /* Show scrolltop */
+    
+    .show-scroll {
+    visibility: visible;
+    bottom: 1.5rem;
+    }
+    
+/*************************NavBar*************************/
+@media (min-width: 768px) {
+    .navbar{
+        height: 100px;
+        overflow: hidden;
+
+        padding: 1.5rem 0 1rem;
+        position: fixed; 
+        top: -100; 
+        width: 100%; 
+        transition: .4s;
+        z-index: var(--z-fixed);
+        background-color:var(--color-light) ;
+    }
+    .navbar .level-nav-link.nav-link{
+        padding: var(--padding-double)  var(--padding-primary);
+    }
+}
+
+.navbar .level-nav-link.nav-link{
+    padding-right: var(--padding-half);
+    padding-left: var(--padding-half);
+   
+}
+.navbar i{
+    text-align: center;
+}
+.navbar .level-nav-link.nav-link.active,
+.navbar .level-nav-link.nav-link:hover {
+    background-color: var(--color-primary);
+    color: white;
+}
+
+.navbar-brand{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.navbar-brand h1{
+    margin: 0;
+    color: #ee5057;
+    font-weight: bold;
+}
+.navbar-brand span{
+
+    color: var(--color-text);
+}
+
+/*************************Home*************************/
+.hero{
+    background-color: var(--color-light);
+    height: 670px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.myname1{
+    font-size: 40px;
+    font-weight: bold;
+    color: var(--color-text); 
+}
+.myname2{
+    font-size: 80px;
+    font-weight: bold;
+    color: var(--color-primary); 
+}
+
+.btn-social{
+    background-color: var(--color-primary);
+    margin-right: 20px;
+  }
+.btn-social i{
+    background-color: var(--color-primary);
+    color: white;
+    font-size: 25px;
+}
+
+#social-links{
+    padding-top: var(--padding-half);
+    padding-bottom: var(--padding-half);
+}
+.btn-outline-light{
+    background-color: var(--color-primary);
+    font-weight: bold;
+}
+.btn-outline-light:hover{
+    color: var(--color-primary);
+}
+
+
+ /***********************Hire Me***********************/
+
+ section{
+    padding: var(--padding-double) 0;
+    position: relative;
+}
+
+.section-color{
+    background-color: var(--color-primary);
+    color: white;
+    padding: var(--padding-double) 0;
+}
+
+.section-title{
+    font-size: var(--font-size-title);
+}
+.section-subtitle{
+    font-size: var(--font-size-title);
+}
+
+.btn-white{
+    border: 2px solid white;
+    color: inherit;
+    padding: var(--padding-half) var(--padding-primary);
+}
+
+.btn-white:hover{
+    background-color: white;
+    color: var(--color-primary);
+}
+
+.section-down-arrow{
+    position: absolute;
+    top: 0;
+    width: 100%;
+    height: var(--height-primary);
+}
+
+.change_content:after{
+	content: '';
+	animation: changetext 5s infinite linear;
+	color: white;
+    font-size: var(--font-size-section-title);
+
+}
+
+@keyframes  changetext{
+	0%{content: "Creative Thinker"}
+	20%{content: "Team-Player"}
+	35%{content: "Effective Leader"}
+	60%{content: "Achiever"}
+	80%{content: "Hard-Worker"}
+	100%{content: "Professional Communicator"}
+}
+/************************* About*************************/
+
+.btnLM {
+    padding: 10px 25px;
+    border-radius: 100px;
+    background-color: var(--color-primary);
+    border: none;
+    color: white;
+    text-transform: uppercase;
+    font-weight: var(--font-bold);
+  }
+
+  .btnLM:hover{
+    background-color: #c3343d;
+}
+  /***********************Education***********************/
+ #TU_logo{
+    width: 170px;
+    height: 170px;
+    margin-left: 400px;
+    margin-bottom: 100px;
+  }
+
+
+.article{
+    text-align: center;
+    color: var(--color-primary);
+    margin-top: var(--size-double);
+    padding: var(--padding-primary);
+    transition: all .2s ease-in;
+}
+
+.article:hover{
+
+    scale: 1.1;
+    box-shadow: 0 0 7px 0 var(--color-text);
+}
+
+.article .article-icon{
+    font-size: 4rem;
+    margin-bottom: var(--size-primary);
+}
+
+.level-slider-item{
+    background-color: inherit;
+    margin-right: 12px;
+}
+.level-slider img{
+    width: 100%;
+}
+
+.level-slider-item-container{
+    padding: var(--padding-primary);
+}
+
+.level-slider-item h3 {
+    font-size: var(--font-size-title);
+    color: var(--color-primary);
+}
+
+.level-slider-item p{
+    font-size: var(--font-size-text);
+    color: var(--color-text);
+}
+
+
+/*************************Skills*************************/
+#heed,#heed2,#heed3,#heed4{
+    color: var(--color-text);
+}
+#skills{
+    height: 700px;
+}
+
+.var_skill{
+    text-align: center;
+    background-color: white;
+
+    margin-top: var(--size-double);
+    padding: var(--padding-primary);
+    transition: all .2s ease-in;
+}
+
+.var_skill:hover{
+
+    scale: 1.1;
+    box-shadow: 0 0 7px 0 var(--color-text);
+}
+
+.var_skill i{
+    font-size: 4rem;
+    margin-bottom: var(--size-primary);
+    color: var(--color-primary);
+}
+#var_skill_mark{
+    display: flex;
+    left: -40;
+}
+
+.bgsize:hover{
+    font-size: large;
+    font-weight: bolder;
+    text-shadow: #111;
+}
+
+/***********************Contact***********************/
+.form-group{
+    flex: 1 25%;
+    position: relative;
+    display: flex;
+    align-items: center;
+    width: 50%;
+    margin:0 auto;
+}
+.form-group .form-control{
+    border-radius: 25px;
+    padding: var(--padding-half);
+    padding-left: var(--padding-double);
+    border : 2px solid var(--color-primary) !important;
+
+
+}
+
+.form-group i {
+    color: var(--color-primary);
+    font-size: var(--font-size-title);
+    position: absolute;
+    left: var(--size-half);
+}
+
+.contact-form .form-control{
+   background-color: white;
+   border: none;
+   margin-bottom: var(--size-half);
+
+}
+
+.contact-form .form-group i{
+   top: var(--size-half);
+}
+
+.btn-primary{
+    background-color: var(--color-primary);
+    border: none;
+    border-radius: 0;
+    width: 50%;
+    padding: var(--padding-half);
+    text-transform: uppercase;
+    font-weight: var(--font-bold);
+    border-radius: 25px;
+     
+    }
+    .btn-primary:hover{
+        background-color: #c3343d;
+
+    }
+
+/*********************** Footer ***********************/
+.footer{
+    background-color: var(--color-secondary);
+}
+
+.footer p{
+    padding: var(--padding-primary) 0;
+    color: white;
+    text-align: center;
+    margin-bottom: 0;
+}
+
+
